@@ -41,21 +41,26 @@
 		<hr class="blue">
 
 		<div class="box">
-			<h4>Temperature Conversion</h4>
+			<h4>Luhn Algorithm</h4>
       		<p>
-		        This ruby program will prompt the user for a temperature 
-		        in degrees Celsius and let the user know what the 
-		        corresponding temperature is in Fahrenheit.
+		        This ruby program solves the problem of verifying if a credit card
+            number is valid. I tested this program using TDD practices and the spec testing gem.
       		</p>
 		</div>
 
 		<div class="box">
-				<pre><code class="language-ruby">puts "Please enter degrees in Celcius:"
-          celcius = gets.chomp.to_i
-
-          fahren = celcius * 1.8 + 32
-
-          puts "The temperature is #{fahren} degrees Fahrenheit."</code></pre>
+				<pre><code class="language-ruby">module Luhn
+  def self.is_valid?(number)
+    split_up = number.to_s.split("").map(&:to_i)
+    split_up.reverse!
+  
+    split_up.map!.each_with_index{|x, index| index.odd? ? x * 2 : x} 
+    split_up.map!.each_with_index{|x, index| (index.odd? && x >= 10) ? x - 9 : x }
+    sum = split_up.inject(:+)
+  
+    return (sum % 10 == 0) ? true : false
+  end
+end</code></pre>
 		</div>
 
 		<br class="clear" />
@@ -170,7 +175,7 @@ end</code></pre>
 
 		<div class="box">
 			<h4>Test Driven Development</h4>
-			<img src="assets/grammable.png" class="full-width" />
+			<img src="assets/grammable2.png" class="full-width" />
 		  	<p>
 		    	An Instagram clone that was built using industry-standard, test-driven
 		    	development following numerous red/green/refactor cycles.
