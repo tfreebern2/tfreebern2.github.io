@@ -22,7 +22,7 @@ p { text-align: center; }
 
 li { display: inline-block; font-size: 12px; width: 100px; font-weight: bold; margin-top: 30px; padding-top: 8px; padding-bottom: 8px; text-align: center; margin-left: 30px; }
 
-.bio { color: #919191; font-size: 14px; }
+.bio { color: white; font-size: 14px; }
 
 .me { height: 150px; border-radius: 100%; border-style: solid; border-color: white; margin-top: 40px; }
 
