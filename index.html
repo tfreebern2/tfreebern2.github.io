@@ -1,262 +1,457 @@
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
 
-		<link rel="stylesheet" href="prism-atom-dark.css" type="text/css" media="screen" />
+    <title>Tim Freebern - Ruby on Rails Developer</title>
 
-    	<script type="text/javascript" src="prism.js"></script>
-    	<script type="text/javascript" src="prism.ruby.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
 
-    	<title>Tim Freebern II</title>
-    	<meta name="description" content="Tim Freebern is an aspiring web developer and is enrolled in the Firehose Project."
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    
+	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/component.css">
 
-	</head>
+	
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/Chart.js"></script>
+	<script src="assets/js/modernizr.custom.js"></script>
+	
 
-	<body>
-		<div class ="about-container">
+	
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
-			<ul>
-			    <li><a href="#" class="nav-link">About</a></li>
-  				<li><a href="#code-samples" class="nav-link">Code Samples</a></li>
-  				<li><a href="#web-apps" class="nav-link">Web Apps</a></li>
-  				<li><a href="#skills-and-tools" class="nav-link">Skills &amp; Tools</a></li>
-  				<li class="hire-me"><a href="#hire-me" class="nav-link">Hire Me</a></li>
-			</ul>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-			<div class="about">
-				<img src="assets/profilepic.jpg" class="me" />
+  <body data-spy="scroll" data-offset="0" data-target="#gn-menu">
+  	<!-- ========== MAIN MENU ========== -->
+	<div class="container">
+		<ul id="gn-menu" class="gn-menu-main">
+			<li class="gn-trigger">
+				<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+				<nav class="gn-menu-wrapper">
+					<div class="gn-scroller">
+						<ul class="gn-menu">
+							<li class="gn-search-item">
+								<input placeholder="Search" type="search" class="gn-search">
+								<a class="gn-icon gn-icon-search"><span>Search</span></a>
+							</li>
+							<li><a href="#home" class="gn-icon gn-icon-home smoothScroll">Home</a></li>
+							<li><a href="#about" class="gn-icon gn-icon-archive smoothScroll">About</a></li>
+							<li><a href="#portfolio" class="gn-icon gn-icon-pictures smoothScroll">Portfolio</a></li>
+							<li><a href="#blog" class="gn-icon gn-icon-article smoothScroll">Blog</a></li>
+							<li><a href="#contact" class="gn-icon gn-icon-envelop smoothScroll">Contact</a></li>
+						</ul>
+					</div><!-- /gn-scroller -->
+				</nav>
+			</li>
+			<li><a href="#home" class="smoothScroll">Scroll to Top</a></li>
+		</ul>
+	</div><!-- /container -->
+		
+	
+	<!-- ========== HEADER SECTION ========== -->
+	<section id="home" name="home"></section>
+	<div id="headerwrap">
+		<div class="container">
+			<div class="col-lg-8">
+			<h1>I'm a Ruby on Rails developer living in Lake Mary, Florida.</h1>
+			</div>
+			<div class="col-lg-4">
+			</div>
+		</div><!-- /container -->
+	</div><!-- /headerwrap -->
+	
+	
+	<!-- ABOUT SECTION -->
+	<section id="about" name="about"></section>
+	<div class="container about">
+		<div class="col-lg-6 col-lg-offset-3">
+			<h3>About Tim Freebern</h3>
+			<h5>RUBY ON RAILS DEVELOPER</h5>
+			<hr>
+			<br>
+			<h4>Avid follower of technology. Enthusiast PC gamer. Lover of code.<br/></h4>
+			<p>I’m seeking a role as a web developer at a company where I can learn, grow, and continue to master the craft. Everyday brings a new challenge that I look forward to conquering.</p>
+		</div><!-- /col-lg-6 -->
+	</div><!-- /container -->
+	
+	
+	<!-- BEGIN CHART SECTION -->	
+	<div id="chartwrap">
+	<br>
+	<br>
+		<div class="container centered">
+			<div class="col-lg-3"></div>
+			
+				<!-- FIRST CHART -->
+				<div class="col-lg-2">
+					<canvas id="canvas" height="130" width="130"></canvas>
+					<label>Ruby</label>
+					<br>
+					<script>
+						var doughnutData = [
+								{
+									value: 75,
+									color:"#1abc9c"
+								},
+								{
+									value : 25,
+									color : "#ecf0f1"
+								}
+							];
+							var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+					</script>
+					<br>
+					<br>
+				</div><!-- col-lg-2 -->
+				
+				
+				<!-- SECOND CHART -->
+				<div class="col-lg-2">
+					<canvas id="canvas1" height="130" width="130"></canvas>
+					<label>Rails</label>
+					<br>
+					<script>
+						var doughnutData = [
+								{
+									value: 75,
+									color:"#1abc9c"
+								},
+								{
+									value : 25,
+									color : "#ecf0f1"
+								}
+							];
+							var myDoughnut = new Chart(document.getElementById("canvas1").getContext("2d")).Doughnut(doughnutData);
+					</script>
+					<br>
+					<br>
+				</div><!-- col-lg-2 -->
+				
+				
+				<!-- THIRD CHART -->
+				<div class="col-lg-2">
+					<canvas id="canvas2" height="130" width="130"></canvas>
+					<label>Javascript</label>
+					<script>
+						var doughnutData = [
+								{
+									value: 60,
+									color:"#1abc9c"
+								},
+								{
+									value : 40,
+									color : "#ecf0f1"
+								}
+							];
+							var myDoughnut = new Chart(document.getElementById("canvas2").getContext("2d")).Doughnut(doughnutData);
+					</script>
+					<br>
+					<br>
+				</div><!-- col-lg-2 -->
 
-				<h1>Tim Freebern II</h1>
+			<div class="col-lg-3"></div>
+		</div><!-- container -->
+	</div><!-- chartwrap -->
+	
+	<section id="portfolio" name="portfolio"></section>
+	<div id="foliowrap">
+		<div class="container">
+			<h3>My Work</h3>
+			<br>
+			<br>
+			<div class="row">	
+			
+				<!-- PORTFOLIO IMAGE 1 -->
+				<div class="col-md-4 ">
+			    	<div class="grid mask">
+						<figure>
+							<img class="img-responsive" src="assets/img/portfolio/folio01.jpg" alt="">
+							<figcaption>
+								<h5>Nomster</h5>
+								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
+							</figcaption><!-- /figcaption -->
+						</figure><!-- /figure -->
+			    	</div><!-- /grid-mask -->
+			    	<br>
+				</div><!-- /col -->
+				
+				
+						 <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
+						      a modal for each of your projects. -->
+						      
+						  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						    <div class="modal-dialog">
+						      <div class="modal-content">
+						        <div class="modal-header">
+						          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						          <h4 class="modal-title">Nomster</h4>
+						        </div>
+						        <div class="modal-body">
+						          <p><img class="img-responsive" src="assets/img/portfolio/folio01.jpg" alt=""></p>
+						          <p>A Yelp clone that integrates with the Google Maps API and includes features like user comments, star ratings, image uploading, and user authentication.</p>
+						          <p><b><a href="https://nomster-tim-freebern.herokuapp.com">Visit Site</a></b></p>
+						        </div>
+						        <div class="modal-footer">
+						          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						        </div>
+						      </div><!-- /.modal-content -->
+						    </div><!-- /.modal-dialog -->
+						  </div><!-- /.modal -->
+				
+				
+				<!-- PORTFOLIO IMAGE 2 -->
+				<div class="col-md-4">
+			    	<div class="grid mask">
+						<figure>
+							<img class="img-responsive" src="assets/img/portfolio/folio02.jpg" alt="">
+							<figcaption>
+								<h5>Flixter</h5>
+								<a data-toggle="modal" href="#flixterModal" class="btn btn-primary btn-lg">Take a Look</a>
+							</figcaption><!-- /figcaption -->
+						</figure><!-- /figure -->
+			    	</div><!-- /grid-mask -->
+			    	<br>
+				</div><!-- /col -->
+				
+							<div class="modal fade" id="flixterModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title">Flixter</h4>
+									</div>
+									<div class="modal-body">
+										<p><img class="img-responsive" src="assets/img/portfolio/folio02.jpg" alt=""></p>
+										<p>A two-sided, video-streaming marketplace platform that features credit card payment capabilities, user role management, complex user interfaces, and advanced database relationships.</p>
+										<p><b><a href="https://flixter-tim-freebern.herokuapp.com">Visit Site</a></b></p>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal-dialog -->
+						</div><!-- /.modal -->
+				
+				<!-- PORTFOLIO IMAGE 3 -->
+				<div class="col-md-4">
+			    	<div class="grid mask">
+						<figure>
+							<img class="img-responsive" src="assets/img/portfolio/folio03.jpg" alt="">
+							<figcaption>
+								<h5>Grammable</h5>
+								<a data-toggle="modal" href="#grammableModal" class="btn btn-primary btn-lg">Take a Look</a>
+							</figcaption><!-- /figcaption -->
+						</figure><!-- /figure -->
+			    	</div><!-- /grid-mask -->
+			    	<br>
+				</div><!-- /col -->
+			</div><!-- /row -->
+			
+						<div class="modal fade" id="grammableModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title">Grammable</h4>
+									</div>
+									<div class="modal-body">
+										<p><img class="img-responsive" src="assets/img/portfolio/folio03.jpg" alt=""></p>
+										<p>An Instagram clone that was built using industry-standard, test-driven development following numerous red/green/refactor cycles.</p>
+										<p><b><a href="https://grammable-tim-freebern.herokuapp.com">Visit Site</a></b></p>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal-dialog -->
+						</div><!-- /.modal -->
 
-				<h2>Web Developer</h2>
+				<!-- PORTFOLIO IMAGE 4 -->
+			<div class="row">	
+				<div class="col-md-4 ">
+			    	<div class="grid mask">
+						<figure>
+							<img class="img-responsive" src="assets/img/portfolio/folio04.jpg" alt="">
+							<figcaption>
+								<h5>Chess</h5>
+								<a data-toggle="modal" href="#chessModal" class="btn btn-primary btn-lg">Take a Look</a>
+							</figcaption><!-- /figcaption -->
+						</figure><!-- /figure -->
+			    	</div><!-- /grid-mask -->
+			    	<br>
+				</div><!-- /col -->
+						
+						<div class="modal fade" id="chessModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title">Chess</h4>
+									</div>
+									<div class="modal-body">
+										<p><img class="img-responsive" src="assets/img/portfolio/folio04.jpg" alt=""></p>
+										<p>Worked on an Agile software development team building a chess application. Under the guidance of a senior software engineer, we had weekly Agile team meetings for code reviews, sprint planning, and feature assignments.</p>
+										<p><b><a href="https://camelotchess.herokuapp.com">Visit Site</a></b></p>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal-dialog -->
+						</div><!-- /.modal -->
+				
+				
+			</div><!-- /row -->
+		
+		</div><!-- /container -->
+	</div><!-- /foliowrap -->
+	
+	
+	<section id="blog" name="blog"></section>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3"></div>
+			<div class="col-lg-6 about">
+				<h3>Blog</h3>
+				<h5>THOUGHTS ABOUT CODING</h5>
+				<br>
+				<br>
+				
+				<!-- ACCORDION -->
+		            <div class="accordion" id="accordion2">
+		                <div class="accordion-group">
+		                    <div class="accordion-heading">
+		                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+		                        <date>Feb 13, 2017</date> <plus> + </plus> My Story
+		                        </a>
+		                    </div><!-- /accordion-heading -->
+		                    <div id="collapseOne" class="accordion-body collapse in">
+		                    	<br>
+		                        <div class="accordion-inner">
+		                        <h4>My Programming Journey </h4>
+															
+		                        <p>My previous experiences with web development and programming date back to 2003 when I was a junior in High School. During my junior year I took three classes that planted a seed in me that has not begun to flourish until now. The three classes I’m talking about are Digital Design, Web Design and Programming I.</p>
+														<p>Digital Design focused on design elements and typography of newsletters, articles and the like. Web Design was a course that taught HTML and later Dreamweaver to develop websites. Programming I taught the fundamentals of programming using the PASCAL language. Out of the three the class that interested me the most was Web Design. However, for whatever reason, I didn’t continue my search for knowledge in web development. I was also so turned off by programming due to it's initial complexity. I never thought I could learn to code.</p>
+														<p>Fast forward to June of 2016 and I’m a working adult with a family and career. I have no college diploma and 14 years of experience in customer service in the retail/grocery industry. I’ve grown tired of the retail industry and don’t feel intellectually challenged and/or stimulated. I feel trapped and unable to do anything about it. My current career is not able to give me the flexibility and control I want for my life. The desire to have control of my own career and to be able to dictate when and where I want to work has been a fire burning inside of me for the past year and a half.</p>
+														<p>To continue reading this blog post click <a href="https://medium.com/@tfreebern2/my-programming-story-and-journey-e661203e275a">here.</a></p>
+															
+														<p><img class="img-circle" src="assets/img/avatar.jpg" height="50px" width="50px">  - <i>Tim Freebern</i></p>
+														</div><!-- /accordion-inner -->
+		                    </div><!-- /collapse -->
+		                </div><!-- /accordion-group -->
+		                <br>
+								</div><!-- Accordion -->
+			</div><!-- /col-lg-6 -->
 
-				<hr class="grey"/>
-
-				<p class="bio">I am a full-stack web developer with experience using Ruby on Rails to develop web applications and services. I've always loved technology and especially computers. Growing up I learned how to tinker with my very own built PCs and troubleshoot issues as they cropped up. I’m seeking a role as a web developer at a company where I can learn, grow, and continue to master the craft. Everyday brings a new challenge that I look forward to conquering.
-        </p>
+			<div class="col-lg-3"></div>
+		</div><!-- /row -->
+	</div><!-- /container -->
+	
+<!--
+	<div id="testimonial">
+		<div class="container">
+			<div class="bs-example">
+				<div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example">
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					</ol>
+				<div class="carousel-inner">
+					<div class="item active">
+						<h1>Work with Alex was a pleasure. He understood exactly what I wanted and created an awesome site for my company.</h1>
+						<br>
+						<h2>Brad Cooper</h2>
+					</div>
+					<div class="item">
+						<h1>I'm really happy with the results. Get 100% satisfaction is difficult but Alex got it without problems.</h1>
+						<br>
+						<h2>Joan Mathews</h2>
+					</div>
+					<div class="item">
+						<h1>Search no more. Alex is the guy that you need for your next project. Don't waste your time. He's the chosen one.</h1>
+						<br>
+						<h2>Trevor Bishop</h2>
+					</div>
+				</div>
+			<br>
+			<br>
+			<br>
 			</div>
 		</div>
-		<h3 id="code-samples">Code Snipppets</h3>
-		<hr class="blue">
-
-		<div class="box">
-			<h4>Luhn Algorithm</h4>
-      		<p>
-		        This ruby program solves the problem of verifying if a credit card
-            number is valid. I tested this program using TDD and the rspec testing gem.
-      		</p>
+	</div>
+-->
+	
+	<section id="contact" name="contact"></section>
+	<div id="footerwrap">
+		<div class="container">
+			<div class="col-lg-5">
+				<h3>Address</h3>
+				<p>
+				510 Huxford Court<br/>
+				Lake Mary, FL<br/>
+				32746<br/>
+				United States
+				</p>
+			</div>
+			
+			<div class="col-lg-7">
+				<h3>Contact Me</h3>
+				<br>
+				<form role="form" action="contact.php" method="post" enctype="plain"> 
+				  <div class="form-group">
+				    <label for="name1">Your Name</label>
+				    <input type="name" name="Name" class="form-control" id="name1" placeholder="Your Name">
+				  </div>
+				  <div class="form-group">
+				    <label for="email1">Email address</label>
+				    <input type="email" name="Mail" class="form-control" id="email1" placeholder="Enter email">
+				  </div>
+				  <div class="form-group">
+				  	<label>Your Text</label>
+				  	<textarea class="form-control" name="Message" rows="3"></textarea>
+				  </div>
+				  <br>
+				  <input type="submit" class="btn-large btn-theme"></input>
+				</form>
+			</div>
+		
 		</div>
+	
+	</div>
+	
 
-		<div class="box">
-				<pre><code class="language-ruby">module Luhn
-  def self.is_valid?(number)
-    split_up = number.to_s.split("").map(&:to_i)
-    split_up.reverse!
-  
-    split_up.map!.each_with_index{|x, index| index.odd? ? x * 2 : x} 
-    split_up.map!.each_with_index{|x, index| (index.odd? && x >= 10) ? x - 9 : x }
-    sum = split_up.inject(:+)
-  
-    return (sum % 10 == 0) ? true : false
-  end
-end</code></pre>
-		</div>
-
-		<br class="clear" />
-
-		<div class="box">
-  			<pre><code class="language-ruby">puts &quot;Give me a number:&quot;
-number = gets.chomp.to_i
-
-def list(number)
-  order = number % 10
-  if number == 0
-    return &quot;Please choose an actual number.&quot;
-  elsif number &gt; 10 &amp;&amp; number &lt; 14
-    return &quot;th&quot;
-  elsif order == 1
-    return &quot;st&quot;
-  elsif order == 2
-    return &quot;nd&quot;
-  elsif order == 3
-    return &quot;rd&quot;
-  else
-    return &quot;th&quot;
-  end
-end
-
-puts &quot;This is the #{number}#{list(number)} on the list!&quot;</code></pre>
-		</div>
-
-		<div class="box">
-  			<h4>Ordinal Challenge</h4>
-			<p>
-				This ruby program will convert a plain number
-				to the ordinal of the number. So for example,
-				if the user enters 2, it will display 2nd, if
-				the user enters 3, it will display 3rd, etc.
-			</p>
-		</div>
-
-		<br class="clear" />
-
-		<div class="box">
-  			<h4>Foobar</h4>
-		  	<p>
-			    This ruby program is an adaptation of a classic technical 
-			    interview problem which displays sequences 
-			    of the Foobar pattern.
-		  	</p>
-		</div>
-
-		<div class="box">
-  			<pre><code class="language-ruby">puts &quot;Let's play a game called Foobar!&quot;
-puts &quot;How many numbers do you want me to output?&quot;
-num = gets.chomp.to_i
-
-n = 0
-  while n &lt; num
-    n = n + 1
-    
-  if n % 3 == 0 &amp;&amp; n % 5 == 0
-    puts &quot;Foobar&quot;
-  elsif n % 3 == 0
-    puts &quot;Foo&quot;
-  elsif n % 5 == 0
-    puts &quot;Bar&quot;
-  else 
-    puts &quot;#{n}&quot;
-  end
-end</code></pre>
-		</div>
-
-		<br class="clear" />
-
-		<h3 id="web-apps">Web Apps</h3>
-		<hr class="blue" />
-
-		<div class="box">
-      <a href="http://splurty-tim-freebern.herokuapp.com/">
-  			<h4>Quote Generator</h4>
-  			<img src="assets/splurty2.png" class="full-width" />
-      </a>
-          <p>
-  	        A database-powered quote generator with a mobile-first
-  	        design, using the Ruby on Rails framework, HTML, and CSS.
-  	        Uses Git and GitHub for version control, and launched
-  	        on Heroku.
-    			</p>
-      </div>
-
-    <div class="box">
-      <a href="http://nomster-tim-freebern.herokuapp.com/"> 
-    		<h4>Yelp Clone</h4>
-  			<img src="assets/nomster2.png" class="full-width" />
-      </a>
-    			<p>
-    		    A Yelp clone that integrates with the Google Maps API 
-    		    and includes features like user comments, star ratings,
-    		    image uploading, and user authentication.
-    	  	</p>
-  		</div>
-    
-
-		<br class="clear" />
-
-    <div class="box">
-  	  <a href="http://flixter-tim-freebern.herokuapp.com/">
-    		<h4>Two-Sided Market Place</h4>
-  			<img src="assets/flixter.png" class="full-width" />
-      </a>
-  			<p>
-  			    A two-sided, video-streaming marketplace platform that
-  			    features credit card payment capabilities, user role
-  			    management, complex user interfaces, and advanced
-  			    database relationships.
-  		  	</p>
-  		</div>
-    
-
-		<div class="box">
-      <a href="http://grammable-tim-freebern.herokuapp.com/">
-  			<h4>Test Driven Development</h4>
-  			<img src="assets/grammable2.png" class="full-width" />
-      </a>
-  		  	<p>
-  		    	An Instagram clone that was built using industry-standard, test-driven
-  		    	development following numerous red/green/refactor cycles.
-  		  	</p>
-  		</div>
-
-		<br class="clear" />
-
-		<div class="box">
-      <a href="http://todo-tim-freebern.herokuapp.com/">
-  			<h4>Single Page Todo Application</h4>
-  			<img src="assets/todoster.png" class="full-width" />
-      </a>
-  			<p>
-    			This single-page to-do application features a
-    			fluid user interface that– by using JavaScript–
-    			allows users to rapidly add dynamic content.
-  			</p>
-		</div>
-
-		<div class="box">
-			<h4>Agile Team Project</h4>
-			<img src="assets/chess.png" class="full-width" />
-  			<p>
-    			Worked on an Agile software development team building
-    			a chess application. Under the guidance of a senior software engineer,
-    			we had weekly Agile team meetings for code reviews, sprint planning,
-    			and feature assignments.
-  			</p>
-		</div>
-
-		<br class="clear" />
-
-		<h3 id="skills-and-tools">Skills &amp; Tools</h3>
-
-		<hr class="blue" />
-
-			<p class="skills-and-tools">
-				  Tim has developed proficiency and expertise 
-				  in the following programming languages and 
-				  comfort with the following tools.
-			</p>
-
-		<div class="icons">
-
-			<img src="assets/github.png" class="icon" />
-			<img src="assets/rubocop.png" class="icon" />
-			<img src="assets/trello.png" class="icon" />
-			<img src="assets/slack.png" class="icon" />
-			<img src="assets/codeship.png" class="icon" />
-
-			<br class="clear" />
-			<img src="assets/skills.png" class="icon" />
-
-		</div>
-
-		<div class="contact-me" id="hire-me">
-
-			<h3 class="contact-headline">Contact</h3>
-
-			<hr class="blue" />
-
-			<p class="contact-info">
-				Currently entertaining new opportunities.
-				Please get in touch via email:
-			</p>
-
-			 <p>
-    			<a href="mailto:tfreebern2@gmail.com" class="contact-link">
-      			tfreebern2@gmail.com
-    			</a>
-  			</p>
-
-		</div>
-
-	</body>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/retina.js"></script>
+	<script src="assets/js/classie.js"></script>
+    <script type="text/javascript" src="assets/js/smoothscroll.js"></script> 
+	<script src="assets/js/gnmenu.js"></script>
+	<script>
+		new gnMenu( document.getElementById( 'gn-menu' ) );
+	</script>  
+	<script>
+		$('.carousel').carousel({
+		  interval: 5500
+		  })
+	</script>
+	
+	
+  </body>
 </html>
